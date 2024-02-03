@@ -8,7 +8,7 @@
   <false/>
   <key>Label</key>
   <string>io.osquery.agent</string>
-  <key>Program</key>
+  <key>ProgramArguments</key>
   <array>
     <string>/opt/osquery/lib/script.sh</string>
     <string>&</string>
