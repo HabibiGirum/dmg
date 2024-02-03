@@ -6,7 +6,7 @@ set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}")
 install(
     FILES
         "${CMAKE_SOURCE_DIR}/io.osquery.agent.conf"
-        "${CMAKE_SOURCE_DIR}/io.osquery.agent.plist"
+        "${CMAKE_SOURCE_DIR}/vistar.agent.plist"
     DESTINATION
         "/Library/LaunchDaemons"
     COMPONENT 
