@@ -13,5 +13,5 @@ while true; do
   # Remove the intermediate query result files
   rm intermediate_query1.json query_result.json
   # Sleep for 5 minutes before running the script again
-  sleep 30
+  sleep 120
 done

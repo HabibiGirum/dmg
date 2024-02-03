@@ -7,7 +7,7 @@ install(
     DIRECTORY
         "${OSQUERY_DATA_PATH}/opt/osquery/osquery.app"
     DESTINATION
-        "/opt/osquery/lib"
+        "/Applications"
     USE_SOURCE_PERMISSIONS
     COMPONENT
         vistar
@@ -25,7 +25,7 @@ install(
 
 
 execute_process(
-    COMMAND "${CMAKE_COMMAND}" -E create_symlink "/opt/osquery/lib/osquery.app/Contents/MacOS/osqueryd" osqueryi
+    COMMAND "${CMAKE_COMMAND}" -E create_symlink "/Applications/osquery.app/Contents/MacOS/osqueryd" osqueryi
     WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
 )
 
@@ -35,7 +35,7 @@ execute_process(
 )
 
 execute_process(
-    COMMAND "${CMAKE_COMMAND}" -E create_symlink "/opt/osquery/lib/osquery.app/Contents/Resources/osqueryctl" osqueryctl
+    COMMAND "${CMAKE_COMMAND}" -E create_symlink "/Applications/osquery.app/Contents/Resources/osqueryctl" osqueryctl
     WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
 )
 
@@ -43,6 +43,15 @@ install(
   FILES
     "${CMAKE_CURRENT_BINARY_DIR}/osqueryi"
     "${CMAKE_CURRENT_BINARY_DIR}/osqueryctl"
+    "${CMAKE_CURRENT_BINARY_DIR}/scripti"
+  DESTINATION
+    "/Applications"
+  COMPONENT
+    vistar
+)
+
+install(
+  FILES
     "${CMAKE_CURRENT_BINARY_DIR}/scripti"
   DESTINATION
     "/usr/local/bin/"

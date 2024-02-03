@@ -355,12 +355,7 @@ jobs:
           name: macos_unsigned_release_package_data_universal
           path: package_data.tar.gz
 
-     # - name: Clone the osquery-packaging repository
-       # run: |
-         # git clone ${{ env.PACKAGING_REPO }} osquery-packaging
 
-          #cd osquery-packaging
-          #git checkout ${{ env.PACKAGING_COMMIT }}
       - name: Clone the osquery-packaging repository
         uses: actions/checkout@v2
         with:
@@ -390,16 +385,8 @@ jobs:
         shell: bash
         run: |
           echo "REL_UNSIGNED_RELEASE_PKG_PATH=$(ls package_build/*.pkg)" >> $GITHUB_OUTPUT
-          echo "REL_UNSIGNED_RELEASE_TGZ_PATH=$(ls package_build/*.tar.gz)" >> $GITHUB_OUTPUT
-
       - name: Store the PKG unsigned release packages
         uses: actions/upload-artifact@v1
         with:
           name: macos_unsigned_pkg_universal
           path: ${{ steps.packages.outputs.REL_UNSIGNED_RELEASE_PKG_PATH }}
-
-      - name: Store the TGZ unsigned release packages
-        uses: actions/upload-artifact@v1
-        with:
-          name: macos_unsigned_tgz_universal
-          path: ${{ steps.packages.outputs.REL_UNSIGNED_RELEASE_TGZ_PATH }}
