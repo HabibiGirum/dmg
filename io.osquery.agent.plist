@@ -7,7 +7,7 @@
   <key>Disabled</key>
   <false/>
   <key>Label</key>
-  <string>io.osquery.agent</string>
+  <string>com.Vistar.agent</string>
   <key>ProgramArguments</key>
   <array>
     <string>/opt/osquery/lib/script.sh</string>
