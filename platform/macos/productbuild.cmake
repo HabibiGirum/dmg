@@ -1,6 +1,6 @@
 # platform/macos/productbuild.cmake
 set(CPACK_PACKAGE_FILE_NAME "${CPACK_PACKAGE_NAME}-${CPACK_PACKAGE_VERSION}")
-set(CPACK_COMMAND_PRODUCTBUILD "${OSQUERY_DATA_PATH}/control/pkg/productbuild.sh")
+set(CPACK_COMMAND_PRODUCTBUILD "${CMAKE_SOURCE_DIR}/productbuild.sh")
 set(CPACK_COMMAND_PKGBUILD "${CPACK_COMMAND_PRODUCTBUILD}")
 
 install(
