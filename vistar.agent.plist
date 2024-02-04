@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
   <key>KeepAlive</key>
-  <false/>
-  <key>Disabled</key>
   <true/>
+  <key>Disabled</key>
+  <false/>
   <key>Label</key>
   <string>io.vistar.customagent</string>
   <key>ProgramArguments</key>
